@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# AIOS runtime files (don't commit)
+.aios/project-status.yaml
+.aios/environment-report.yaml
+.aios/environment-report.json
+
+# Decision logs (optional - uncomment to ignore)
+# .ai/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Supabase local
+.supabase/
+supabase/.branches/
+supabase/.temp/

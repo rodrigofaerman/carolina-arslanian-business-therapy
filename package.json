@@ -1,0 +1,10 @@
+{
+  "name": "carolina-arslanian-website-2026-01-21",
+  "version": "0.1.0",
+  "description": "Created with Synkra AIOS",
+  "scripts": {
+    "dev": "echo 'Configure dev script'",
+    "build": "echo 'Configure build script'",
+    "test": "echo 'Configure test script'"
+  }
+}
