@@ -101,26 +101,20 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative">
-              {/* Decorative gold circle behind */}
-              <div className="absolute -top-8 -right-8 w-80 h-80 rounded-full bg-[var(--color-accent)]/10 blur-3xl" />
+            <div className="relative flex justify-center">
+              {/* Decorative gold glow behind */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[var(--color-accent)]/15 blur-3xl" />
 
-              {/* Gold border frame */}
-              <div className="absolute inset-0 border-2 border-[var(--color-accent)]/30 rounded-2xl translate-x-4 translate-y-4" />
-
-              {/* Main image container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              {/* Main image - transparent background */}
+              <div className="relative">
                 <Image
-                  src="/images/carolina-hero.jpg"
+                  src="/images/carolina-hero-red.png"
                   alt="Carolina Arslanian - Mental Fitness Specialist"
-                  width={500}
-                  height={650}
-                  className="w-full h-auto object-cover"
+                  width={450}
+                  height={580}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
                   priority
                 />
-
-                {/* Gradient overlay at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-bg-primary)] to-transparent" />
               </div>
             </div>
           </motion.div>

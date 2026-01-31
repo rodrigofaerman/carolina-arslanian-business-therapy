@@ -60,6 +60,11 @@ h1, h2, h3, .font-serif {
   font-family: var(--font-serif), Georgia, serif;
 }
 
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 /* Focus States (Accessibility) */
 :focus-visible {
   outline: 2px solid var(--color-accent);
