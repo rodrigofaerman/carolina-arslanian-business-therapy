@@ -1,0 +1,13 @@
+export { default as Hero } from "./Hero";
+export { default as Problem } from "./Problem";
+export { default as Framework } from "./Framework";
+export { default as HowItWorks } from "./HowItWorks";
+export { default as Results } from "./Results";
+export { default as Comparison } from "./Comparison";
+export { default as About } from "./About";
+export { default as ForWho } from "./ForWho";
+export { default as Investment } from "./Investment";
+export { default as Urgency } from "./Urgency";
+export { default as FAQ } from "./FAQ";
+export { default as NextSteps } from "./NextSteps";
+export { default as CTAFinal } from "./CTAFinal";

@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/* ============================================
+   BUSINESS THERAPY CODE™ - Design System
+   Brand tokens & global styles
+   ============================================ */
+
+@theme inline {
+  /* Typography */
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  /* Brand Colors */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-elevated: #334155;
+  --color-accent: #fbbf24;
+  --color-accent-hover: #f59e0b;
+  --color-accent-subtle: rgba(251, 191, 36, 0.1);
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-gold: 0 0 40px rgba(251, 191, 36, 0.15);
+
+  /* Spacing */
+  --section-gap: 120px;
+  --section-pad: 80px;
+  --container-max: 1280px;
+
+  /* Border Radius */
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Focus States (Accessibility) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced Motion (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(251, 191, 36, 0.3);
+  color: #f8fafc;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-elevated);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Gold gradient text utility */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #fde68a 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card glass effect */
+.glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+}
+
+/* Animated grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(251, 191, 36, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gold line decorative element */
+.gold-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+}
+
+/* Section separator */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-bg-elevated), transparent);
+}
+
+/* ============================================
+   THEME: ELEGANT (Brown/Gold/Cream)
+   Inspired by Business Therapy Code branding
+   ============================================ */
+
+[data-theme="elegant"] {
+  /* Brand Colors - Elegant Brown/Gold */
+  --color-bg-primary: #2a1f17;
+  --color-bg-secondary: #3a2a1d;
+  --color-bg-elevated: #4a3828;
+  --color-accent: #c9a961;
+  --color-accent-hover: #d4b872;
+  --color-accent-subtle: rgba(201, 169, 97, 0.12);
+  --color-text-primary: #faf6f0;
+  --color-text-secondary: #e8e0d4;
+  --color-text-muted: #a89880;
+  --color-success: #7cb66a;
+  --color-danger: #d47070;
+  --color-border: rgba(201, 169, 97, 0.12);
+  --color-border-hover: rgba(201, 169, 97, 0.25);
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --shadow-gold: 0 0 40px rgba(201, 169, 97, 0.2);
+}
+
+[data-theme="elegant"] .text-gradient-gold {
+  background: linear-gradient(135deg, #c9a961 0%, #e8d5a8 50%, #c9a961 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="elegant"] .bg-grid {
+  background-image:
+    linear-gradient(rgba(201, 169, 97, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 97, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+[data-theme="elegant"] .gold-line {
+  background: linear-gradient(90deg, transparent, #c9a961, transparent);
+}
+
+[data-theme="elegant"] ::selection {
+  background-color: rgba(201, 169, 97, 0.35);
+  color: #faf6f0;
+}
+
+[data-theme="elegant"] ::-webkit-scrollbar-thumb:hover {
+  background: #c9a961;
+}
